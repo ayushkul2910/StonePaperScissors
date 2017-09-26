@@ -34,7 +34,7 @@ while True:
     ret, img = cap.read()
     img=img[100:346,100:346]
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    stone = stone_cascade.detectMultiScale(gray, 1.3, 5)
+    stone = stone_cascade.detectMultiScale(gray, 1.1, 5)
     paper = paper_cascade.detectMultiScale(gray, 1.2, 5)
     scissors = sci_cascade.detectMultiScale(gray, 1.1, 150)
     none = none_cascade.detectMultiScale(gray, 1.1, 1)
